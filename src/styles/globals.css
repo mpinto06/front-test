@@ -1,0 +1,41 @@
+/* CSS Reset (simplified) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set up root font and colors */
+:root {
+  --font-family: Arial, sans-serif;
+  --font-size-base: 16px;
+  --color-bg: #f9f9f9;
+  --color-text: #222;
+  --color-primary: #574dd4;
+  --color-primary-light: #C6C3F2;
+  --color-secondary: #A9C8F5;
+  --color-secondary-bg: #f2f2f2;
+  --color-text-light: #BBBBBB;
+  --border-radius: 6px;
+  --transition: 0.2s ease;
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  min-height: 100vh;
+  line-height: 1.6;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

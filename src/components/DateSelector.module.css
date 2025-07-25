@@ -1,0 +1,19 @@
+.buttonContainer {
+    border-radius: 24px;
+    background-color: var(--color-secondary-bg);
+    display: flex;
+    margin-bottom: 24px;   
+}
+
+
+.button {
+    padding: 10px;
+    border-radius: 24px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buttonActive {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,115 @@
+.mainContainer {
+  width: 360px;
+  height: 600px;
+  border-radius: 16px;
+  border: 1px solid var(--color-text);
+  padding: 16px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.mainContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mainContainer::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+.mainContainer::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.mainContainer::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 10px; 
+}
+
+.mainContainer::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 10px;
+}
+
+.messageList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.emptyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  --_g: no-repeat radial-gradient(farthest-side, var(--color-primary) 90%,#0000);
+  background: var(--_g), var(--_g), var(--_g);
+  background-size: 25% 25%;
+  animation: l17 1s infinite;
+}
+@keyframes l17{ 
+  0%     {background-position: 0% -100%,50% -100%,100% -100%}
+  16.67% {background-position: 0%   50%,50% -100%,100% -100%}
+  33.33% {background-position: 0%   50%,50%   50%,100% -100%}
+  45%,55%{background-position: 0%   50%,50%   50%,100%   50%}
+  66.67% {background-position: 0%  200%,50%   50%,100%   50%}
+  83.33% {background-position: 0%  200%,50%  200%,100%   50%}
+  100%   {background-position: 0%  200%,50%  200%,100%  200%}
+}
+
+.message {
+  background-color: var(--color-primary-light);
+  max-width: 180px;
+  border-radius: 16px;
+  align-self: flex-end;
+}
+
+.messageContent {
+  padding: 8px;
+  padding-bottom: 0px;
+}
+
+.botMessage {
+  align-self: flex-start;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.timestamp {
+  text-align: end;
+  font-size: 12px;
+  padding: 4px;
+  padding-top: 0px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.scrollTop {
+  position: sticky;
+  justify-content: center;
+  background-color: var(--color-secondary-bg);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: bold;
+  border-radius: 16px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  align-items: center;
+  display: flex;
+  background-color: var();
+  left: 50%; 
+  top: 90%;    
+  z-index: 10;
+}
