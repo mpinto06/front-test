@@ -5,6 +5,7 @@ import empty from "../assets/empty-box.svg";
 import { formatTimestamp } from "@/utils/formatTimeStamp";
 import check from "../assets/check.svg";
 import checkSeen from "../assets/check-seen.svg";
+import Image from "next/image";
 
 
 
@@ -53,7 +54,7 @@ const MessageList: React.FC<MessageListProps> = ({ messages, loading }) => {
       }
       {messages.length === 0 && !loading &&
         <div className={styles.emptyContainer}>
-          <img src={empty.src}  width={100}/>
+          <Image alt="empty" src={empty.src} height={100}  width={100}/>
           <div>No messages</div>
         </div>
       }
@@ -69,11 +70,11 @@ const MessageList: React.FC<MessageListProps> = ({ messages, loading }) => {
                   {formatTimestamp(msg.message_date)}
                 </div>
                 {!msg.bot_sender && !msg.read_by_business &&
-                  <img src={check.src} width={10} height={10} />
+                  <Image src={check} alt="check" width={10} height={10} />
                 }
 
                 {!msg.bot_sender && msg.read_by_business &&
-                  <img src={checkSeen.src} width={10} height={10} />
+                  <Image src={checkSeen} alt="seen check" width={10} height={10} />
                 } 
                 
                 </div>
